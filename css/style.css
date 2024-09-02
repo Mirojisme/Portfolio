@@ -149,7 +149,7 @@ header {
     margin-left: 10%;
 }
 
-.active, .collapse:hover {
+.collapse:hover {
     background-color: #45a29e;
 }
 
