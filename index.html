@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Webpage</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
     
 </head>
 <body>
-    
+      
     <div class="nav">
         <div class="navlogo">
             <img src="images/Richard.png">
@@ -24,19 +25,19 @@
                 <img src="images/icons/Nav.png">
             </button>
             <div class="ddcontent">
-                <a href="#" class="active"><img src="images/icons/information.png">  About Me</a>
-                <a href="#"><img src="images/icons/briefcase.png">  Experience</a>
-                <a href="#"><img src="images/icons/project.png">  Projects</a>
-                <a href="#"><img src="images/icons/skills.png">  Skills</a>
-                <a href="#"><img src="images/icons/graduation.png">  Education</a>
-                <a href="#"><img src="images/icons/letter.png">  Contact</a>
-                <a href="#"><img src="images/icons/cv.png">  Resume</a>
+                <a href="#abtme"><img src="images/icons/information.png">  About Me</a>
+                <a href="#exp"><img src="images/icons/briefcase.png">  Experience</a>
+                <a href="#project"><img src="images/icons/project.png">  Projects</a>
+                <a href="#skill"><img src="images/icons/skills.png">  Skills</a>
+                <a href="#resume"><img src="images/icons/cv.png">  Resume</a>
+                <a href="#edu"><img src="images/icons/graduation.png">  Education</a>
+                <a href="#contact"><img src="images/icons/letter.png">  Contact</a>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="content">
+    <div class="container"> 
+        <div class="content hidden" id="abtme">
             <h2>About Me</h2>
             <p>
                 As an entry-level software developer, I am passionate about creating innovative solutions that blend functionality with user-friendly design. 
@@ -51,11 +52,17 @@
                 As I continue to grow in this field, I am excited to take on new challenges and contribute to projects that push the boundaries of what’s possible.
             </p>
         </div>
-    
-        <div class="content" style="background-color: #0b0c10;">
+     
+        <div class="content"  id="exp" style="background-color: #0b0c10;">
             <h2>Experience</h2>   
             <button type="button" class="collapse">New Penn Motor Express</button>
             <div class="collapsecontent">
+                <p style="padding: 0 10px 0 10px;">2014 - 2023</p>
+                <p style="padding: 0 10px 0 10px;">I oversaw daily operations and supervised warehouse staff to ensure an efficient workflow and high productivity. 
+                    This included providing training, guidance, and conducting performance evaluations to enhance team performance. 
+                    I managed shift scheduling to ensure adequate staffing levels to meet operational needs and fostered a safe and positive work environment that encouraged teamwork and collaboration. 
+                    I was also responsible for inspecting incoming and outgoing shipments for accuracy, condition, and quality, as well as resolving any issues with damaged or incorrect shipments. 
+                    Additionally, I maintained open communication with staff to ensure clarity of tasks and expectations and accurately tracked and recorded employee hours, including overtime, for payroll processing.</p>
                 <ul>
                     <li>Oversee daily operations and supervise warehouse staff, ensuring efficient workflow and productivity.</li>
                     <li>Provide training, guidance, and performance evaluations to team members.</li>
@@ -70,6 +77,10 @@
             
             <button type="button" class="collapse">Essex County College</button>
             <div class="collapsecontent">
+                <p style="padding: 0 10px 0 10px;">2012 - 2014</p>
+                <p style="padding: 0 10px 0 10px;">I was responsible for maintaining and troubleshooting computer hardware, software, and network issues within the lab, ensuring a secure and productive environment. 
+                    I enforced lab rules and policies to maintain order and proper use of resources, implementing security protocols to safeguard equipment and data from unauthorized access or misuse. 
+                    Additionally, I provided technical support to faculty and staff, assisted users with software applications, printing, and resolving technical issues, and offered guidance on the proper use of lab equipment and software.</p>
                 <ul>
                     <li>Maintain and troubleshoot computer hardware, software, and network issues in the lab.</li>
                     <li>Monitor the computer lab to ensure a secure and productive environment.</li>
@@ -83,7 +94,7 @@
         </div>
         
     
-        <div class="content">
+        <div class="content hidden" id="project">
             <h2>Projects</h2>
             <div id="projects">
                 <div style="display: flex; align-items: center;">
@@ -186,7 +197,7 @@
             </div>
         </div>
     
-        <div class="content-small">
+        <div class="content-small hidden" id="skill">
             <h2>Skills</h2>
             <p>Technical Skills</p>
             <ul style="list-style-type: none;">
@@ -200,13 +211,13 @@
                 <li>Git</li>
             </ul>
             <p>Soft Skills</p>
-            <ul style="list-style-type: none;">
-                <li>Critical Thinking</li>
-                <li>Attention to Detail</li>
-                <li>Organization</li>
-                <li>Adaptability</li>
-                <li>Team Player</li>
-                <li>Creativity</li>
+            <ul>
+                <li><strong>Critical Thinking</strong> - I used critical thinking to analyze data and evaluate multiple perspectives, enabling me to make well-informed decisions and develop strategic plans that aligned with our objectives.</li>
+                <li><strong>Attention to Detail</strong> - I consistently applied attention to detail when reviewing reports and code, catching errors that others might have missed, which significantly improved the quality and accuracy of our outputs.</li>
+                <li><strong>Organization</strong> - I utilized my organizational skills by creating detailed project plans and setting clear deadlines, which helped me and my team stay on track and ensure that we met all our goals efficiently.</li>
+                <li><strong>Adaptability</strong> - I demonstrated adaptability by quickly learning new tools and adjusting to sudden changes in project requirements, ensuring that we maintained productivity and delivered results despite unforeseen challenges.</li>
+                <li><strong>Team Player</strong> - I fostered a collaborative environment by effectively communicating with team members, actively listening to their ideas, and coordinating our efforts, which led to a successful project completion.</li>
+                <li><strong>Creativity</strong> - I leveraged my creativity by brainstorming innovative solutions during team meetings, contributing fresh ideas that helped us overcome complex problems and enhance our project’s overall impact.</li>
             </ul>
             <!--
             <div class="progressbar">
@@ -216,23 +227,18 @@
             
         </div>
         
-        <div class="content-small">
-            <h2>Certifications</h2>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Tempus himenaeos ullamcorper pharetra est inceptos tristique. Est laoreet molestie luctus maecenas risus ligula consectetur? 
-                Facilisis libero curae pretium aenean vulputate. Per non mattis neque euismod duis rhoncus aliquam eros. Litora accumsan proin integer; tellus metus nascetur. 
-                Lacinia dis augue dui tempus; morbi dolor sagittis arcu. Purus aenean blandit dolor dictum leo. Ad aptent ad blandit tempus montes molestie netus rhoncus ligula. 
-                Semper cras fames mus pellentesque congue. Metus pulvinar etiam volutpat molestie tempus tortor posuere. Fames penatibus sociosqu lacus facilisi rutrum id vehicula. 
-                Auctor nec primis conubia libero lacinia hac dis dictum posuere. Suscipit sem ridiculus aptent senectus elit? Aliquet etiam vestibulum maximus felis felis faucibus pharetra. 
-                Suscipit iaculis et dignissim aliquam parturient placerat interdum imperdiet.</p>
+        <div class="content-small hidden"  id="resume">
+            <h2>Resume</h2>
+            <embed src="extra/Resume.pdf" width="100%" height="80%"/>
         </div>
         
-        <div class="content" style="background-color: #0b0c10;">
+        <div class="content hidden" id="edu" style="background-color: #0b0c10;">
             <h2>Education</h2>
             <button type="button" class="collapse">Kean University </button>
             <div class="collapsecontent">
-                <ul>
-                    <p>Bachelor Degree - May 2024</p>
-                    <p>Relevant Courses</p>
+                
+                    <p style="padding: 0 10px 0 10px;">Bachelor Degree - May 2024</p>
+                    <p style="padding: 0 10px 0 10px;">Relevant Courses</p>
                     <ul>
                         <li>Computer Architecture</li>
                         <li>Data Mining Principles</li>
@@ -246,40 +252,47 @@
                         <li>Computer Security</li>
                         <li>Operating Systems</li>
                     </ul>
-                </ul>
+                
                     
             </div>  
+            <button type="button" class="collapse">Essex County College </button>
+            <div class="collapsecontent">
+                
+                    <p style="padding: 0 10px 0 10px;">I began my academic journey at Essex County College, a two-year college, where I completed my foundational coursework and developed essential skills in my field of study. 
+                        After achieving a solid academic record and gaining a strong understanding of my career goals, I transferred to Kean University, a four-year college, to pursue my bachelor's degree. 
+                        This transition allowed me to access more advanced courses, engage in research opportunities, and connect with a broader network of peers and professors to further my education and professional development.</p>
+                    <p style="padding: 0 10px 0 10px;">Relevant Courses</p>
+                    <ul>
+                        <li>Computer Architecture</li>
+                        <li>Data Mining Principles</li>
+                        <li>Database Management</li>
+                        <li>Information Systems Programming</li>
+                        <li>Mobile Application Development</li>
+                        <li>Object Oriented Analysis and Design</li>
+                        <li>Programming World Wide Web Server</li>
+                        <li>Programming in Unix/Linux</li>
+                        <li>Software Engineering</li>
+                        <li>Computer Security</li>
+                        <li>Operating Systems</li>
+                    </ul>
+                
+                    
+            </div> 
         </div>
     
-        <div class="content">
+        <div class="content hidden" id="contact">
             <h2>Contact</h2>
 
-            <p style="display: flex; align-items: center;"><img src="images/icons/letter.png" style="height: 50px; padding-right: 20px;"><a href="#" style="text-decoration: none; font-size: larger; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">  Email</a></p>
+            <p style="display: flex; align-items: center;"><img src="images/icons/letter2.png" style="height: 50px; padding-right: 20px;"><a href="#" style="text-decoration: none; font-size: larger; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">  Email</a></p>
             <p style="display: flex; align-items: center;"><img src="images/icons/linkedin.png" style="height: 50px; padding-right: 20px;"><a href="#" style="text-decoration: none; font-size: larger; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">  Linkedin</a></p>
             <p style="display: flex; align-items: center;"><img src="images/icons/github.png" style="height: 50px; padding-right: 20px;"><a href="#" style="text-decoration: none; font-size: larger; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #fff;">  Github</a></p>
 
         </div>
     </div>
-    <script>
-        var coll = document.getElementsByClassName("collapse");
-        var i;
-
-        for (i = 0; i < coll.length; i++){
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                }
-                else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
+    
 
     <footer>
-        <p>&copy; 2024 Responsive Webpage</p>
+        <!--<p>&copy; 2024 Responsive Webpage</p>-->
     </footer>
 </body>
 </html>
