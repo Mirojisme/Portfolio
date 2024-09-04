@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Richard Angueira Project 2</title>
+    </head>
+    <body>
+        <h1>Richard Angueira's CPS 3525 project 2</h1>
+        <br>
+        <form enctype="multipart/form-data" action="../cgi-bin/project2" method="post">
+            <label for="mydata">Paste the first object text data here:</label>
+            <br>
+            <textarea name='mydata' cols=20 rows=10 required></textarea>
+            <br>
+            <hr>
+            <br>
+            <label for="objectfile">2nd object text data file:</label>
+            <br>
+            <input type = "file" name = "objectFile" required />
+            <br>
+            <br>
+            <input type = "submit" value = "Submit" />
+        </form>
+    </body>
+</html>
