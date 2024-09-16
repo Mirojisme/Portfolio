@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<div class="nav">
 		<div class="navlogo">
 			<a href="#"><img src="../../images/Richard.png"></a>
@@ -31,6 +32,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="container">
 		<div class="content-small">
 			<p>
@@ -58,60 +60,29 @@
 		<div class="content-small">
 			<h2>PHP Form</h2>
 			<br />
-			<?php
-			require 'Manager.php';
-			require 'Sales.php';
+			<!-- when button is clicked, employee.php will be executed -->
+			<form action="Employee.php" method="post">
 
-			$empName = $_POST['empName'];
-			$empMoney = $_POST['empMoney'];
-			$empTitle = $_REQUEST['empTitle'];
+				<p>
+					<h1>New Employee Form:</h1>
+				</p>
 
-				class Employee{
+				<p><label>Enter the employees name: <input type="text" name="empName" size="20" maxlength="40"></label></p>
 
-					private $name;
-					private $position;
-					private $salary;
+				<p><label>Enter the employees base salary: <input type="text" name="empMoney" size="20" maxlength="40"></label></p>
 
-					public function __construct($name, $position, $salary){
-						$this->name = $name;
-						$this->position = $position;
-						$this->salary = $salary;
-					}
-					function get_name(){
-						return $this->name;
-					}
-					function get_position(){
-						return $this->position;
-					}
-					function get_salary(){
-						return $this->salary;
-					}
 
-				}
+				<input type="radio" id="manager" name="empTitle" value="Manager">
+				<label for="html">Manager</label><br>
+				<input type="radio" id="sales" name="empTitle" value="Sales">
+				<label for="html">Sales</label><br>
+				<input type="radio" id="r&d" name="empTitle" value="R&D">
+				<label for="html">R & D</label><br>
 
-			$empInfo = new Manager($empName, $empTitle, $empMoney);
-			echo "</br>";
-			echo $empInfo->get_name() . "<br>";
 
-			echo $empInfo->get_position() . "<br>";
+				<p><input type="submit" value="Submit Form" name="submit"></p>
 
-			echo $empInfo->get_salary() . "<br>";
-
-			echo $empInfo->get_department() . "<br>";
-
-			$empInfo = new Sales($empName, $empTitle, $empMoney);
-			echo "</br>";
-			echo $empInfo->get_name() . "<br>";
-
-			echo $empInfo->get_position() . "<br>";
-
-			echo $empInfo->get_salary() . "<br>";
-
-			echo $empInfo->get_bonus() . "<br>";
-
-			echo '<p><form method="POST" action="phpform.html">
-				<input type="submit" value="Go Back!"/></form></p>';
-			?>
+			</form>
 		</div>
 
 	</div>
